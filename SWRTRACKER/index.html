@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+     <!--Title-->
+    <title>TRACKER SITE</title>
+     <!-- CSS File-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #228275; color: red;">
+	<CENTER ><h2>Swr Lot Records</h2></CENTER>
+    <!--Table-->
+    <table  
+    
+        <!--Row-1-->
+        <tr>
+            <!--Column-1-->
+            <td>
+                
+                <!--Form-->
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off" >
+                	<h3>ADD SWR LOT</h3><hr>
+                  <!--div-1-->
+                    <div>
+                        <label>SMS LOT</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="smsvalidationError">This field is required</label>
+                        <!--Input SMS LOT NUMBER-->
+                        <input type="number" name="sms" id="sms" placeholder="Enter the sms lot Number">
+                    </div>
+                    <!--div-2-->
+                    <div>
+                        <label>ITEM ID</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="itemidvalidationError" >This field is required</label>
+                        <!--Input ITEM ID-->
+                        <input type="text" name="itemid" id="itemid" placeholder="Enter the Item ID">
+                    </div>
+                    <!--div-3-->
+                    <div>
+                        <label>Material</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="matvalidationError">This field is required</label>
+                       <!--Input Materials-->
+                        <input type="text" name="mat" id="mat" placeholder="Enter the Material">
+                    </div>
+                    <!--div-4-->
+                    <div>
+                        <label>Pin_Pkg</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="pkgvalidationError">This field is required</label>
+                        <!--Input pin pkg-->
+                        <input type="text" name="pkg" id="pkg" placeholder="Enter the pin_pkg">
+                    </div>
+                    <!--div-5-->
+                    <div>
+                        <label>Remark</label>
+                        <!--Validation Error-->
+                        <label class="validation-error hide" id="markvalidationError">This field is required</label>
+                        <!--Input comments/remarks-->
+                        <input type="text" name="mark" id="mark" placeholder="Enter Remarks">
+                    </div>
+                    <!--div-6-->
+                    <div class="form-action-buttons">
+                        <!--Input Button-->
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+            </td>
+
+            <!--Column-2-->
+            <td>
+                <!--Nested Table-->
+                <table class="list" id="swrlist" style="background-color: #dfe4e5;">
+                    <!--Table Head-->
+                    <thead>
+                        <!--Row-2-->
+                        <tr>
+                            <th>SMS LOT</th>
+                            <th> ITEM_ID</th>
+                            <th>MATERIAL</th>
+                            <th>PIN_PKG</th>
+                            <th>REMARK</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <!--Table Body-->
+                    <tbody>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- JS File-->
+    <script src="script.js"></script>
+</body>
+</html>
